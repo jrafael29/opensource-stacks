@@ -17,21 +17,25 @@
 * __Postgresql__
 * __Redis__
 
+## Para o Typebot: 
 
+Necessario criar um database typebot
+```
+psql -U postgres
+create database typebot;
+```
 
-For N8N: 
+## Para o N8N: 
 
-run this: 
+Necessario criar um database n8n_queue
 ```
 psql -U postgres
 create database n8n_queue;
 ```
 
+## No caso de não possuir docker na maquina
 
-
-No caso de não possuir docker na maquina:
-
-Instalação Docker
+__Guia de Instalação Docker__
 ```
 sudo apt-get update ; apt-get install -y apparmor-utils
 hostnamectl set-hostname meuservidor1
