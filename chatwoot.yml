@@ -2,7 +2,7 @@ version: "3.7"
 
 ##############
 #
-# Execute o mando para migrar o banco:
+# Execute o comando para migrar o banco:
 #
 # bundle exec rails db:chatwoot_prepare
 #
@@ -23,7 +23,7 @@ services:
       - RAILS_ENV=production
       - INSTALLATION_ENV=docker
       - SECRET_KEY_BASE=123458bb7ef6402f6a8bcf5d3be54321
-      - FRONTEND_URL=https://seudominio.com.br
+      - FRONTEND_URL=https://chatwoot.joserafael.dev.br
       - DEFAULT_LOCALE=pt_BR
       - FORCE_SSL=true
       - ENABLE_ACCOUNT_SIGNUP=false
@@ -36,16 +36,16 @@ services:
       - RAILS_LOG_TO_STDOUT=true
       - USE_INBOX_AVATAR_FOR_BOT=true
       # Servidor de Email Gmail
-      - MAILER_SENDER_EMAIL=Chatwoot <seuemail@gmail.com>
+      - MAILER_SENDER_EMAIL=Chatwoot <jrafael5758@gmail.com>
       - SMTP_DOMAIN=gmail.com
       - SMTP_ADDRESS=smtp.gmail.com
       - SMTP_PORT=587
-      - SMTP_USERNAME=seuemail@gmail.com
-      - SMTP_PASSWORD=suasenhadeapp
+      - SMTP_USERNAME=jrafael5758@gmail.com
+      - SMTP_PASSWORD=uwouxqhqltavglrn
       - SMTP_AUTHENTICATION=login
       - SMTP_ENABLE_STARTTLS_AUTO=true
       - SMTP_OPENSSL_VERIFY_MODE=peer
-      - MAILER_INBOUND_EMAIL_DOMAIN=seuemail@gmail.com
+      - MAILER_INBOUND_EMAIL_DOMAIN=jrafael5758@gmail.com
     deploy:
       mode: replicated
       replicas: 1
@@ -58,7 +58,7 @@ services:
           memory: 1024M
       labels:
         - traefik.enable=true
-        - traefik.http.routers.chatwoot_app.rule=Host(`seudominio.com.br`)
+        - traefik.http.routers.chatwoot_app.rule=Host(`chatwoot.joserafael.dev.br`)
         - traefik.http.routers.chatwoot_app.entrypoints=websecure
         - traefik.http.routers.chatwoot_app.tls.certresolver=letsencryptresolver
         - traefik.http.routers.chatwoot_app.priority=1
@@ -81,7 +81,7 @@ services:
       - RAILS_ENV=production
       - INSTALLATION_ENV=docker
       - SECRET_KEY_BASE=123458bb7ef6402f6a8bcf5d3be54321
-      - FRONTEND_URL=https://seudominio.com.br
+      - FRONTEND_URL=https://chatwoot.joserafael.dev.br
       - DEFAULT_LOCALE=pt_BR
       - FORCE_SSL=true
       - ENABLE_ACCOUNT_SIGNUP=false
@@ -94,16 +94,16 @@ services:
       - RAILS_LOG_TO_STDOUT=true
       - USE_INBOX_AVATAR_FOR_BOT=true
       # Servidor de Email Gmail
-      - MAILER_SENDER_EMAIL=Chatwoot <seuemail@gmail.com>
+      - MAILER_SENDER_EMAIL=Chatwoot <jrafael5758@gmail.com>
       - SMTP_DOMAIN=gmail.com
       - SMTP_ADDRESS=smtp.gmail.com
       - SMTP_PORT=587
-      - SMTP_USERNAME=seuemail@gmail.com
-      - SMTP_PASSWORD=suasenhadeapp
+      - SMTP_USERNAME=jrafael5758@gmail.com
+      - SMTP_PASSWORD=uwouxqhqltavglrn
       - SMTP_AUTHENTICATION=login
       - SMTP_ENABLE_STARTTLS_AUTO=true
       - SMTP_OPENSSL_VERIFY_MODE=peer
-      - MAILER_INBOUND_EMAIL_DOMAIN=seuemail@gmail.com
+      - MAILER_INBOUND_EMAIL_DOMAIN=jrafael5758@gmail.com
     deploy:
       mode: replicated
       replicas: 1

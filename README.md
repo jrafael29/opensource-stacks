@@ -3,7 +3,7 @@
 
 # Plataformas OpenSources
 
-* __N8N__               (Automação de fluxos, selhante ao make.com)
+* __N8N__               (Automação de fluxos, selhante ao make.com) [Modo fila com redis]
 * __EvolutionAPI__      (whatsapp api)
 * __Minio__             (Serviço de Storage, semelhante ao S3)
 * __Portainer__         (Gerenciador visual-interativo para docker)
@@ -25,13 +25,32 @@ psql -U postgres
 create database typebot;
 ```
 
+## Para o Chatwoot White-Label: 
+
+Necessario rodar as migrates no container da aplicação
+(utilize o /ash ou /sh para se conectar)
+```
+bundle exec rails db:chatwoot_prepare
+```
+
+Para "desbloquear" funcionalidades do super admin
+Se conecte ao postgres, usando o database correto, execute a instrução
+```
+psql -U postgres #conecta ao pg
+\c chatwoot; # altera database
+update installation_configs set locked = false; #atualizar tabela
+```
+
+
 ## Para o N8N: 
 
+Necessario **Redis**
 Necessario criar um database n8n_queue
 ```
 psql -U postgres
 create database n8n_queue;
 ```
+
 
 ## No caso de não possuir docker na maquina
 
