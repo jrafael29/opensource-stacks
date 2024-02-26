@@ -3,19 +3,23 @@
 
 # Plataformas OpenSources
 
-* __N8N__               (Automação de fluxos, selhante ao make.com) [Modo fila com redis]
+* __Chatwoot__          (Serviço de suporte via chat)
 * __EvolutionAPI__      (whatsapp api)
+* __Mautic__            (Serviço de disparo de email)
 * __Minio__             (Serviço de Storage, semelhante ao S3)
+* __N8N__               (Automação de fluxos, selhante ao make.com) [Modo fila com redis]
 * __Portainer__         (Gerenciador visual-interativo para docker)
 * __Typebot Viewer__    (Frotend do typebot)
 * __Typebot Builder__   (Backend do typebot)
 * __Traefik__           (Webserver, utilizado para proxy reverso)
-* __Chatwoot__          (Serviço de suporte via chat)
 
-# Extra
 
+# Banco de dados
+
+* __Mysql__
 * __Postgresql__
 * __Redis__
+
 
 ## Para o Typebot: 
 
