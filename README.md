@@ -51,6 +51,14 @@ psql -U postgres
 create database n8n_queue;
 ```
 
+## Para o Mautic 
+
+Necessario **MySql**
+Necessario criar um database mautic
+```
+mysql -u root -p
+CREATE DATABASE mautic;
+```
 
 ## No caso de não possuir docker na maquina
 

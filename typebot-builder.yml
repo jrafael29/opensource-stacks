@@ -17,7 +17,7 @@ services:
       - NEXT_PUBLIC_SMTP_FROM='Typebot' <jrafael5758@gmail.com>
       - SMTP_AUTH_DISABLED=false
       - SMTP_USERNAME=jrafael5758@gmail.com
-      - SMTP_PASSWORD=xculnobalrjlkvnb
+      - SMTP_PASSWORD=
       - SMTP_HOST=smtp.gmail.com
       - SMTP_PORT=587
       - SMTP_SECURE=true
